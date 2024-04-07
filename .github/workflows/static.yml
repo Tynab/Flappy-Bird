@@ -52,7 +52,6 @@ jobs:
       - name: 🚀 Publish to GitHub Pages
         if: (github.event_name != 'pull_request')
         run: |
-          cd public
           touch .nojekyll
           git init
           cp ../.git/config ./.git/config

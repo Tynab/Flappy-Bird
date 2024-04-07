@@ -46,17 +46,18 @@ jobs:
       # Workaround for SharedArrayBuffer support on GitHub Pages
       # See: https://github.com/godotengine/godot-docs/issues/7084
       - run: |
+          cd
           curl -fsSL https://github.com/gzuidhof/coi-serviceworker/raw/master/coi-serviceworker.js > coi-serviceworker.js
           sed -i 's#\(		<script src="index.js"></script>\)#		<script src="coi-serviceworker.js"></script>\n\1#g' index.html
 
       - name: 🚀 Publish to GitHub Pages
         if: (github.event_name != 'pull_request')
         run: |
+          cd
           touch .nojekyll
           git init
-          cp ../.git/config ./.git/config
           git add .
           git config --local user.email "godot@GitHubActions"
           git config --local user.name "GitHub Actions"
           git commit -a -m "update ${{ github.sha }}"
-          git push -u origin +HEAD:main
+          git push -u origin +HEAD:gh-pages

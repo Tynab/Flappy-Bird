@@ -54,8 +54,9 @@ jobs:
         run: |
           touch .nojekyll
           git init
+          cp ../.git/config ./.git/config
           git add .
-          git config --local user.email "yamiannephilim@gmail.com"
-          git config --local user.name "Tynab"
+          git config --local user.email "godot@GitHubActions"
+          git config --local user.name "GitHub Actions"
           git commit -a -m "update ${{ github.sha }}"
           git push -u origin +HEAD:gh-pages

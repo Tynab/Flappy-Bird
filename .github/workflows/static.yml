@@ -54,7 +54,7 @@ jobs:
         run: |
           touch .nojekyll
           git init
-          cp ../.git/config ./.git/config
+          cp ./.git/config ./.git/config
           git add .
           git config --local user.email "godot@GitHubActions"
           git config --local user.name "GitHub Actions"

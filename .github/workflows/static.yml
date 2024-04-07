@@ -49,13 +49,13 @@ jobs:
           curl -fsSL https://github.com/gzuidhof/coi-serviceworker/raw/master/coi-serviceworker.js > coi-serviceworker.js
           sed -i 's#\(		<script src="index.js"></script>\)#		<script src="coi-serviceworker.js"></script>\n\1#g' index.html
 
-      - name: 🚀 Publish to GitHub Pages
+      - name: Publish to GitHub Pages
         if: (github.event_name != 'pull_request')
         run: |
           touch .nojekyll
           git init
           git add .
-          git config --local user.email "godot@GitHubActions"
-          git config --local user.name "GitHub Actions"
+          git config --local user.email "yamiannephilim@gmail.com"
+          git config --local user.name "Tynab"
           git commit -a -m "update ${{ github.sha }}"
           git push -u origin +HEAD:gh-pages

@@ -19,6 +19,7 @@ size = Vector2(72, 524)
 size = Vector2(20, 200)
 
 [node name="Pipe" type="Area2D" groups=["pipes"]]
+z_index = -1
 script = ExtResource("1_qaogv")
 
 [node name="Lower" type="Sprite2D" parent="."]

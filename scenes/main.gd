@@ -88,4 +88,5 @@ func bird_hit():
 	
 func scored():
 	score += 1
-	$ScoreLabel.text = "SCORE: " + str(score)
+	#$ScoreLabel.text = "SCORE: " + str(score)
+	$ScoreLabel.text = str(screen_size.x) + str(score)

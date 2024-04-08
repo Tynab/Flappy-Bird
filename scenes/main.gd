@@ -16,7 +16,7 @@ var score
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	screen_size = get_window().size
+	screen_size = get_viewport().size
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
 	new_game()
 

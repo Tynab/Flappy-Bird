@@ -12,10 +12,12 @@ script = ExtResource("1_e3oyd")
 pipe_scene = ExtResource("2_b4v3i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
 texture = ExtResource("1_ymhha")
 offset = Vector2(432, 384)
 
 [node name="Bird" parent="." instance=ExtResource("3_3gr0d")]
+z_index = -1
 
 [node name="Ground" parent="." instance=ExtResource("4_wy10w")]
 

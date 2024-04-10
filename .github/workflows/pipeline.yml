@@ -7,9 +7,6 @@ on:
     - cron: '0 0 * * 5'
   workflow_dispatch:
 
-env:
-  DOCKER_BUILDKIT: 1
-
 jobs:
   pages:
     runs-on: ubuntu-latest
